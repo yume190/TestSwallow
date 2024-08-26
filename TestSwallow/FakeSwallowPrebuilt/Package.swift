@@ -29,23 +29,23 @@ let package = Package(
             name: "Swallow",
             path: "../XCFrameworks/Swallow.xcframework"
         ),
-        .target(
-            name: "Swallow_Aggregation",
-            dependencies: [
-                "Swallow",
-            ]
-        ),
+        // .target(
+        //     name: "Swallow_Aggregation",
+        //     dependencies: [
+        //         "Swallow",
+        //     ]
+        // ),
         .binaryTarget(
              name: "FoundationX",
              path: "../XCFrameworks/FoundationX.xcframework"
         ),
-        .target(
-             name: "FoundationX_Aggregation",
-             dependencies: [
-                 "FoundationX",
-                 "Swallow_Aggregation",
-             ]
-        ),
+        // .target(
+        //      name: "FoundationX_Aggregation",
+        //      dependencies: [
+        //          "FoundationX",
+        //          "Swallow_Aggregation",
+        //      ]
+        // ),
  
         .testTarget(
             name: "TempTests",
