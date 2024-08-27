@@ -37,8 +37,6 @@ let testTargets: [Target] = [
             "Swallow_Aggregation",
             "FoundationX_Aggregation",   
             "_PythonString_Aggregation",
-            
-            // "FoundationX", 
         ]
     ),
 ]
@@ -59,8 +57,6 @@ let package = Package(
                 "Swallow_Aggregation",
                 "FoundationX_Aggregation",
                 "_PythonString_Aggregation",
-                // "Swallow",
-                // "FoundationX",
             ]),
     ],
     targets: targets + testTargets

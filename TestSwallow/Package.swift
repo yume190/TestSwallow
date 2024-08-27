@@ -17,7 +17,7 @@ var package = Package(
 //            url: "https://github.com/vmanot/Swallow",
 //            revision: "97e1a308056eeae280d1a58179769ffe275952d2"
 //        ),
-        .package(path: "FakeSwallow"),  
+        .package(path: "FakeSwallow"),
         // .package(name: "FakeSwallow", path: "FakeSwallowPrebuilt"),
     ],
     targets: [

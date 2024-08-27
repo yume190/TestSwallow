@@ -21,6 +21,7 @@ let package = Package(
         .target(
             name: "Swallow"
         ),
+
         .target(
             name: "_PythonString"
         ),
@@ -28,7 +29,7 @@ let package = Package(
         .target(
             name: "FoundationXDependency"
         ),
-        
+
         .target(
             name: "FoundationX",
             dependencies: [
@@ -36,6 +37,7 @@ let package = Package(
                 "FoundationXDependency",
             ]
         ),
+
         .testTarget(
             name: "TempTests",
             dependencies: [
