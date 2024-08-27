@@ -1,13 +1,14 @@
 import XCTest
-// @testable import FoundationX_Aggr
 import FoundationX
-// @testable import Swallow2_Aggr
+import _PythonString
 import Swallow
+import FoundationXDependency
 
 final class TempTests: XCTestCase {
-    func testA() {
-        print(123)
+    func testTemp() {
         XCTAssertEqual(swallow(), 1)
         XCTAssertEqual(foundationX(), 2)
+        XCTAssertEqual(python(), 3)
+        XCTAssertEqual(dependency(), 4)
     }
 }

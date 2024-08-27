@@ -3,6 +3,46 @@
 
 import PackageDescription
 
+func prebuiltTarget(name: String, dependencies: [Target.Dependency] = []) -> [Target] {
+    return [
+        .binaryTarget(
+            name: name,
+            path: "../XCFrameworks/\(name).xcframework"
+        ),
+        .target(
+            name: "\(name)_Aggregation",
+            dependencies: [
+                .target(name: name),
+            ] + dependencies
+        ),
+    ]
+}
+let targets = [
+    prebuiltTarget(name: "Swallow"),
+    prebuiltTarget(name: "_PythonString"),
+    prebuiltTarget(name: "FoundationXDependency"),
+    prebuiltTarget(
+        name: "FoundationX",
+        dependencies: [
+            "Swallow_Aggregation",
+            "FoundationXDependency_Aggregation",
+        ]
+    ),
+].flatMap { $0 }
+
+let testTargets: [Target] = [
+    .testTarget(
+        name: "TempTests",
+        dependencies: [
+            "Swallow_Aggregation",
+            "FoundationX_Aggregation",   
+            "_PythonString_Aggregation",
+            
+            // "FoundationX", 
+        ]
+    ),
+]
+
 let package = Package(
     name: "FakeSwallow",
     platforms: [
@@ -16,47 +56,12 @@ let package = Package(
         .library(
             name: "FakeSwallow",
             targets: [
-                // "Swallow_Aggregation",
-                // "FoundationX_Aggregation",
-                "Swallow",
-                "FoundationX",
-            ]),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.        
-        .binaryTarget(
-            name: "Swallow",
-            path: "../XCFrameworks/Swallow.xcframework"
-        ),
-        // .target(
-        //     name: "Swallow_Aggregation",
-        //     dependencies: [
-        //         "Swallow",
-        //     ]
-        // ),
-        .binaryTarget(
-             name: "FoundationX",
-             path: "../XCFrameworks/FoundationX.xcframework"
-        ),
-        // .target(
-        //      name: "FoundationX_Aggregation",
-        //      dependencies: [
-        //          "FoundationX",
-        //          "Swallow_Aggregation",
-        //      ]
-        // ),
- 
-        .testTarget(
-            name: "TempTests",
-            dependencies: [
                 "Swallow_Aggregation",
                 "FoundationX_Aggregation",
-
-                // "FoundationX",
+                "_PythonString_Aggregation",
                 // "Swallow",
-            ]
-        ),
-        
-    ]
+                // "FoundationX",
+            ]),
+    ],
+    targets: targets + testTargets
 )

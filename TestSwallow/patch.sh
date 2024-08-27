@@ -1,9 +1,18 @@
-mkdir -p Versions/A
-mv XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/* Versions/A
-mv Versions XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/
-ln -s XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/Versions/A/FoundationX XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/FoundationX
+#!/bin/bash
 
-mkdir -p Versions/A
-mv XCFrameworks/Swallow.xcframework/macos-arm64_x86_64/Swallow.framework/* Versions/A
-mv Versions XCFrameworks/Swallow.xcframework/macos-arm64_x86_64/Swallow.framework
-ln -s XCFrameworks/Swallow.xcframework/macos-arm64_x86_64/Swallow.framework/Versions/A/Swallow XCFrameworks/Swallow.xcframework/macos-arm64_x86_64/Swallow.framework/Swallow
+dir="XCFrameworks"
+
+for entry in "$dir"/*.xcframework
+do
+  fileName=$(basename "$entry")
+  name="${fileName%.*}"
+  cd XCFrameworks/$name.xcframework/macos-arm64_x86_64/$name.framework
+
+  mkdir -p Versions/A
+  cp -r $name Versions/A/$name
+  cp -r Headers Versions/A/Headers
+  cp -r Info.plist Versions/A/Info.plist
+  cp -r Modules Versions/A/Modules
+
+  cd -
+done
