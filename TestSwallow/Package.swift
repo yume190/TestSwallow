@@ -7,7 +7,7 @@ import Foundation
 var package = Package(
     name: "TestSwallow",
     platforms: [
-        .iOS(.v13),
+        // .iOS(.v13),
         .macOS(.v11),
         // .tvOS(.v13),
         // .watchOS(.v6)
@@ -34,8 +34,21 @@ var package = Package(
 )
 
 #if os(macOS)
+if ProcessInfo.processInfo.environment["USE_PREBUILT_V2"] != nil {
+    patch2(in: &package)
+}
+#endif
+private func patch2(in package: inout Package) {
+    package.dependencies = [
+        .package(path: "XCFrameworks/packages/FakeSwallow"),
+        // .package(name: "FakeSwallow", path: "XCFrameworks/packages/FakeSwallow"),
+    ]
+}
+
+
+#if os(macOS)
 if ProcessInfo.processInfo.environment["USE_PREBUILT"] != nil {
-patch(in: &package)
+    patch(in: &package)
 }
 #endif
 private func patch(in package: inout Package) {

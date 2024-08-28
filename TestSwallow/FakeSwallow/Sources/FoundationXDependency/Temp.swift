@@ -2,5 +2,5 @@
 // https://docs.swift.org/swift-book
 
 public func dependency() -> Int {
-    4
+    0b0100
 }

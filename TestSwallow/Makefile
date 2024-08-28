@@ -22,3 +22,12 @@ test: clean gen patch
 	cd FakeSwallowPrebuilt && swift test
 	swift run
 	USE_PREBUILT=1 swift run
+	USE_PREBUILT_V2=1 swift run
+
+symbol:
+	-nm XCFrameworks/Swallow.xcframework/macos-arm64_x86_64/Swallow.framework/Swallow | grep swallow
+	-nm XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/FoundationX | grep swallow
+
+link:
+	-otool -L XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/FoundationX | grep swallow
+	-otool -L XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/FoundationX | grep Swallow

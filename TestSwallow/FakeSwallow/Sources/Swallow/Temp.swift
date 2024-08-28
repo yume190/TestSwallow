@@ -2,5 +2,7 @@
 // https://docs.swift.org/swift-book
 
 public func swallow() -> Int {
-    1
+    0b0010
 }
+
+open class SwallowClass {}

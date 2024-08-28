@@ -2,5 +2,5 @@
 // https://docs.swift.org/swift-book
 
 public func python() -> Int {
-    3
+    0b1000
 }

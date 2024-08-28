@@ -1,0 +1,138 @@
+❯ nm XCFrameworks/FoundationX.xcframework/macos-arm64_x86_64/FoundationX.framework/FoundationX | swift-demangle
+0000000000003eac s reflection metadata field descriptor FoundationX.FoundationXClass
+0000000000002134 T type metadata accessor for FoundationX.FoundationXClass
+00000000000081e0 d full type metadata for FoundationX.FoundationXClass
+00000000000081b8 D metaclass for FoundationX.FoundationXClass
+0000000000003e74 S nominal type descriptor for FoundationX.FoundationXClass
+00000000000081f8 D type metadata for FoundationX.FoundationXClass
+0000000000002124 T FoundationX.FoundationXClass.__deallocating_deinit
+000000000000211c T FoundationX.FoundationXClass.deinit
+0000000000002114 T FoundationX.foundationX() -> Swift.Int
+0000000000003e68 s module descriptor FoundationX
+                 U Swallow.SwallowClass.__allocating_init() -> Swallow.SwallowClass
+                 U metaclass for Swallow.SwallowClass
+                 U nominal type descriptor for Swallow.SwallowClass
+                 U type metadata for Swallow.SwallowClass
+                 U value witness table for Builtin.NativeObject
+                 U _OBJC_METACLASS_$_Swift._SwiftObject
+0000000000008258 s _Swift56ConcurrencyOverrides
+00000000000083e8 s _Swift56RuntimeOverrides
+0000000000008168 s __DATA_FoundationX.FoundationXClass
+0000000000008120 s __METACLASS_DATA_FoundationX.FoundationXClass
+                 U __NSConcreteGlobalBlock
+00000000000084c0 b __ZL16vouchersDisabled
+00000000000084b8 b __ZL23voucherDisableCheckOnce
+0000000000002acc t __ZL27_initializeVouchersDisabledPv
+0000000000002430 t __ZL31task_future_wait_resume_adapterPN5swift12AsyncContextE
+0000000000002548 t __ZL33task_wait_throwing_resume_adapterPN5swift12AsyncContextE
+0000000000002d8c t __ZL9errorNamei
+0000000000002a9c t __ZN5swift14VoucherManager19vouchersAreDisabledEv
+0000000000002b08 t __ZN5swift14VoucherManager9swapToJobEPNS_3JobE
+00000000000029b8 t __ZN5swift16adoptTaskVoucherEPNS_9AsyncTaskE
+00000000000029e4 t __ZN5swift18restoreTaskVoucherEPNS_9AsyncTaskE
+0000000000003164 t __ZN5swift19MutexPlatformHelper4initER16os_unfair_lock_sb
+0000000000002f40 t __ZN5swift19MutexPlatformHelper4initER23_opaque_pthread_mutex_tb
+0000000000003170 t __ZN5swift19MutexPlatformHelper4lockER16os_unfair_lock_s
+0000000000003060 t __ZN5swift19MutexPlatformHelper4lockER23_opaque_pthread_mutex_t
+0000000000003184 t __ZN5swift19MutexPlatformHelper6unlockER16os_unfair_lock_s
+00000000000030b0 t __ZN5swift19MutexPlatformHelper6unlockER23_opaque_pthread_mutex_t
+000000000000316c t __ZN5swift19MutexPlatformHelper7destroyER16os_unfair_lock_s
+0000000000003010 t __ZN5swift19MutexPlatformHelper7destroyER23_opaque_pthread_mutex_t
+0000000000003198 t __ZN5swift19MutexPlatformHelper8try_lockER16os_unfair_lock_s
+0000000000003100 t __ZN5swift19MutexPlatformHelper8try_lockER23_opaque_pthread_mutex_t
+0000000000002c10 t __ZN5swift19_swift_tsan_acquireEPv
+0000000000002c74 t __ZN5swift19_swift_tsan_releaseEPv
+000000000000297c t __ZN5swift21swift_task_getCurrentEv
+0000000000002d38 t __ZN5swift23ConditionPlatformHelper4initER22_opaque_pthread_cond_t
+0000000000002ef0 t __ZN5swift23ConditionPlatformHelper4waitER22_opaque_pthread_cond_tR23_opaque_pthread_mutex_t
+0000000000002e00 t __ZN5swift23ConditionPlatformHelper7destroyER22_opaque_pthread_cond_t
+0000000000002ea0 t __ZN5swift23ConditionPlatformHelper9notifyAllER22_opaque_pthread_cond_t
+0000000000002e50 t __ZN5swift23ConditionPlatformHelper9notifyOneER22_opaque_pthread_cond_t
+0000000000002984 t __ZN5swift24_swift_task_clearCurrentEv
+0000000000008498 s __ZN5swift25TaskAllocatorSlabMetadataE
+00000000000033b8 t __ZN5swift27ReadWriteLockPlatformHelper10readUnlockER24_opaque_pthread_rwlock_t
+0000000000003408 t __ZN5swift27ReadWriteLockPlatformHelper11writeUnlockER24_opaque_pthread_rwlock_t
+00000000000032a0 t __ZN5swift27ReadWriteLockPlatformHelper12try_readLockER24_opaque_pthread_rwlock_t
+0000000000003354 t __ZN5swift27ReadWriteLockPlatformHelper13try_writeLockER24_opaque_pthread_rwlock_t
+00000000000031ac t __ZN5swift27ReadWriteLockPlatformHelper4initER24_opaque_pthread_rwlock_t
+0000000000003200 t __ZN5swift27ReadWriteLockPlatformHelper7destroyER24_opaque_pthread_rwlock_t
+0000000000003250 t __ZN5swift27ReadWriteLockPlatformHelper8readLockER24_opaque_pthread_rwlock_t
+0000000000003304 t __ZN5swift27ReadWriteLockPlatformHelper9writeLockER24_opaque_pthread_rwlock_t
+0000000000002970 t __ZN5swift28swift_Concurrency_fatalErrorEjPKcz
+00000000000027f8 t __ZN5swift31swift_task_escalateBackdeploy56EPNS_9AsyncTaskENS_11JobPriorityE
+0000000000002348 t __ZN5swift38swift56override_swift_task_future_waitEPNS_11OpaqueValueEPNS_12AsyncContextEPNS_9AsyncTaskEPU14swiftasynccallFvU19swift_async_contextS3_ES3_PU14swiftasynccallFvS1_U19swift_async_contextS3_S5_S7_S3_E
+0000000000002558 t __ZN5swift40swift56override_swift_task_create_commonEmPNS_16TaskOptionRecordEPKNS_14TargetMetadataINS_9InProcessEEEPU14swiftasynccallFvU19swift_async_contextPNS_12AsyncContextEEPvmPU9swiftcallFNS_19AsyncTaskAndContextEmS1_S6_SA_SB_mE
+00000000000034bc t __ZN5swift45swift_task_exitThreadLocalContextBackdeploy56EPc
+0000000000003458 t __ZN5swift46swift_task_enterThreadLocalContextBackdeploy56EPc
+0000000000002438 t __ZN5swift47swift56override_swift_task_future_wait_throwingEPNS_11OpaqueValueEPNS_12AsyncContextEPNS_9AsyncTaskEPU14swiftasynccallFvU19swift_async_contextS3_U13swift_contextPvES3_PU14swiftasynccallFvS1_U19swift_async_contextS3_S5_S8_S3_E
+0000000000002154 t __ZN5swift9AsyncTask10waitFutureEPS0_PNS_12AsyncContextEPU14swiftasynccallFvU19swift_async_contextS3_ES3_PNS_11OpaqueValueE
+0000000000002568 t __ZN5swift9AsyncTask18flagAsRunning_slowEv
+00000000000026b0 t __ZN5swift9AsyncTask20flagAsSuspended_slowEv
+00000000000084b0 b __ZN5swiftL20StatusRecordLockLockE
+000000000000288c t __ZN5swiftL25waitForStatusRecordUnlockEPNS_9AsyncTaskERNS_16ActiveTaskStatusE
+0000000000008520 b __ZZ50swift_getFunctionTypeMetadataGlobalActorBackDeployE12builderToken
+0000000000008518 b __ZZ50swift_getFunctionTypeMetadataGlobalActorBackDeployE9builderFn
+00000000000084c8 b __ZZZL25swift_voucher_needs_adoptP9voucher_sENKUlvE_clEvE7TheLazy
+0000000000002be0 t __ZZZL25swift_voucher_needs_adoptP9voucher_sENKUlvE_clEvENUlPvE_8__invokeES2_
+00000000000084d8 b __ZZZN5swift19_swift_tsan_acquireEPvENK3$_0clEvE7TheLazy
+0000000000002cd8 t __ZZZN5swift19_swift_tsan_acquireEPvENK3$_0clEvENUlS0_E_8__invokeES0_
+00000000000084e8 b __ZZZN5swift19_swift_tsan_releaseEPvENK3$_1clEvE7TheLazy
+0000000000002d08 t __ZZZN5swift19_swift_tsan_releaseEPvENK3$_1clEvENUlS0_E_8__invokeES0_
+00000000000084a0 b __ZZZN5swift31swift_task_escalateBackdeploy56EPNS_9AsyncTaskENS_11JobPriorityEENK3$_2clEvE7TheLazy
+000000000000285c t __ZZZN5swift31swift_task_escalateBackdeploy56EPNS_9AsyncTaskENS_11JobPriorityEENK3$_2clEvENUlPvE_8__invokeES4_
+0000000000008508 b __ZZZN5swift45swift_task_exitThreadLocalContextBackdeploy56EPcENK3$_1clEvE7TheLazy
+0000000000003550 t __ZZZN5swift45swift_task_exitThreadLocalContextBackdeploy56EPcENK3$_1clEvENUlPvE_8__invokeES2_
+00000000000084f8 b __ZZZN5swift46swift_task_enterThreadLocalContextBackdeploy56EPcENK3$_0clEvE7TheLazy
+0000000000003520 t __ZZZN5swift46swift_task_enterThreadLocalContextBackdeploy56EPcENK3$_0clEvENUlPvE_8__invokeES2_
+                 U __ZdlPv
+                 U __Znwm
+0000000000004030 s ___block_descriptor_tmp
+0000000000004050 s ___block_literal_global
+0000000000003608 t ___swift_getFunctionTypeMetadataGlobalActorBackDeploy_block_invoke
+0000000000003e42 s ___swift_reflection_version
+00000000000081b0 d __dyld_private
+                 U __objc_empty_cache
+0000000000008250 d __swift_FORCE_LOAD_$_swiftCompatibility56
+0000000000004028 s __swift_FORCE_LOAD_$_swiftCompatibility56_$_FoundationX
+0000000000008251 d __swift_FORCE_LOAD_$_swiftCompatibilityConcurrency
+0000000000004020 s __swift_FORCE_LOAD_$_swiftCompatibilityConcurrency_$_FoundationX
+                 U __swift_stdlib_operatingSystemVersion
+                 U _abort
+                 U _dispatch_once
+                 U _dispatch_once_f
+                 U _dlsym
+                 U _objc_opt_self
+                 U _os_release
+                 U _os_unfair_lock_lock
+                 U _os_unfair_lock_trylock
+                 U _os_unfair_lock_unlock
+                 U _pthread_cond_broadcast
+                 U _pthread_cond_destroy
+                 U _pthread_cond_init
+                 U _pthread_cond_signal
+                 U _pthread_cond_wait
+                 U _pthread_getspecific
+                 U _pthread_mutex_destroy
+                 U _pthread_mutex_init
+                 U _pthread_mutex_lock
+                 U _pthread_mutex_trylock
+                 U _pthread_mutex_unlock
+                 U _pthread_mutexattr_destroy
+                 U _pthread_mutexattr_init
+                 U _pthread_mutexattr_settype
+                 U _pthread_rwlock_destroy
+                 U _pthread_rwlock_init
+                 U _pthread_rwlock_rdlock
+                 U _pthread_rwlock_tryrdlock
+                 U _pthread_rwlock_trywrlock
+                 U _pthread_rwlock_unlock
+                 U _pthread_rwlock_wrlock
+                 U _pthread_setspecific
+                 U _swift_deallocClassInstance
+                 U _swift_errorRetain
+0000000000003580 t _swift_getFunctionTypeMetadataGlobalActorBackDeploy
+                 U _swift_once
+0000000000003ea6 s _symbolic _____ 11FoundationX0A6XClassC
+0000000000003ea0 s _symbolic _____ 7Swallow0A5ClassC
+                 U _voucher_adopt
+                 U dyld_stub_binder

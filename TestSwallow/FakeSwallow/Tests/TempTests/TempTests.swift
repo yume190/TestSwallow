@@ -6,9 +6,9 @@ import XCTest
 
 final class TempTests: XCTestCase {
     func testTemp() {
-        XCTAssertEqual(swallow(), 1)
-        XCTAssertEqual(foundationX(), 2)
-        XCTAssertEqual(python(), 3)
+        XCTAssertEqual(swallow(), 2)
+        XCTAssertEqual(foundationX(), 7)
+        XCTAssertEqual(python(), 8)
         XCTAssertEqual(dependency(), 4)
     }
 }

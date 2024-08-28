@@ -1,3 +1,8 @@
+import Swallow
+import FoundationXDependency
+
 public func foundationX() -> Int {
-    2
+    0b0001 + dependency() + swallow()
 }
+
+open class FoundationXClass: SwallowClass {}
