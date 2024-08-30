@@ -13,11 +13,8 @@ var package = Package(
         // .watchOS(.v6)
     ],
     dependencies: [
-//        .package(
-//            url: "https://github.com/vmanot/Swallow",
-//            revision: "97e1a308056eeae280d1a58179769ffe275952d2"
-//        ),
         .package(path: "FakeSwallow"),
+        // .package(path: "XCFrameworks/packages/Swallow"),
         // .package(name: "FakeSwallow", path: "FakeSwallowPrebuilt"),
     ],
     targets: [
@@ -26,7 +23,6 @@ var package = Package(
         .executableTarget(
             name: "TestSwallow",
             dependencies: [
-                // .product(name: "Swallow", package: "Swallow"),
                 .product(name: "FakeSwallow", package: "FakeSwallow"),
             ]
         ),
@@ -40,8 +36,7 @@ if ProcessInfo.processInfo.environment["USE_PREBUILT_V2"] != nil {
 #endif
 private func patch2(in package: inout Package) {
     package.dependencies = [
-        .package(path: "XCFrameworks/packages/FakeSwallow"),
-        // .package(name: "FakeSwallow", path: "XCFrameworks/packages/FakeSwallow"),
+        .package(path: "XCFrameworks/packages/Swallow"),
     ]
 }
 

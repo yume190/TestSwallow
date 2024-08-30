@@ -9,12 +9,14 @@ var package = Package(
     platforms: [
         // .iOS(.v13),
         .macOS(.v11),
+        // .tvOS(.v13),
+        // .watchOS(.v6)
     ],
     dependencies: [
-       .package(
-           url: "https://github.com/vmanot/Swallow",
-           revision: "97e1a308056eeae280d1a58179769ffe275952d2"
-       ),
+        .package(
+            url: "https://github.com/vmanot/Swallow",
+            revision: "97e1a308056eeae280d1a58179769ffe275952d2"
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -23,7 +25,11 @@ var package = Package(
             name: "UseSwallow",
             dependencies: [
                 .product(name: "Swallow", package: "Swallow"),
-                // .product(name: "FakeSwallow", package: "FakeSwallow"),
+            ],
+            swiftSettings: [
+                .unsafeFlags([
+                   "-load-plugin-executable", "XCFrameworks/SwallowMacros#SwallowMacros"
+                ])
             ]
         ),
     ]
@@ -40,3 +46,4 @@ private func patch(in package: inout Package) {
         // .package(name: "FakeSwallow", path: "XCFrameworks/packages/FakeSwallow"),
     ]
 }
+ 

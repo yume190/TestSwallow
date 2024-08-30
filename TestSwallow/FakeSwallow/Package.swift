@@ -13,6 +13,11 @@ let package = Package(
                 "Swallow",
                 "FoundationX",
                 "_PythonString",
+
+                "CTarget",
+                // "CppTarget",
+                "ObjcTarget",
+                "ObjcppTarget",
             ]),
     ],
     targets: [
@@ -37,6 +42,13 @@ let package = Package(
                 "FoundationXDependency",
             ]
         ),
+
+        // POC Part
+        .target(name: "LonelyTarget"),
+        .target(name: "CTarget"),
+        // .target(name: "CppTarget"),
+        .target(name: "ObjcTarget"),
+        .target(name: "ObjcppTarget"),
 
         .testTarget(
             name: "TempTests",

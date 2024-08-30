@@ -1,0 +1,1 @@
+void cpp_target_test();
