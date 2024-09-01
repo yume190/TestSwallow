@@ -29,7 +29,7 @@ var package = Package(
             swiftSettings: [
                 .unsafeFlags([
                    "-load-plugin-executable", "XCFrameworks/SwallowMacros#SwallowMacros"
-                ])
+                ]),
             ]
         ),
     ]
