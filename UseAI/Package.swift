@@ -7,16 +7,15 @@ import Foundation
 var package = Package(
     name: "UseSwallow",
     platforms: [
-        .iOS(.v13),
-        .macOS(.v11),
-        .tvOS(.v13),
-        .watchOS(.v6)
+        .iOS(.v16),
+        .macOS(.v13)
     ],
     dependencies: [
-       .package(
-           url: "https://github.com/vmanot/Swallow",
-           revision: "97e1a308056eeae280d1a58179769ffe275952d2"
-       ),
+        .package(
+            url: "https://github.com/PreternaturalAI/AI",
+            branch: "main"
+        ),
+        
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,7 +23,7 @@ var package = Package(
         .executableTarget(
             name: "UseSwallow",
             dependencies: [
-               .product(name: "Swallow", package: "Swallow"),
+                .product(name: "AI", package: "AI"),
             ]
         ),
     ]
@@ -42,7 +41,7 @@ private func patchToUsePrebuiltXcframeworks(in package: inout Package) {
 #if os(macOS)
     if ProcessInfo.processInfo.environment["USE_PREBUILT"] != nil {
         package.dependencies = [
-            .package(path: "XCFrameworks/packages/Swallow"),
+            .package(path: "XCFrameworks/packages/AI"),
         ]
         for target in package.targets {
             if target.name == "UseSwallow" {
